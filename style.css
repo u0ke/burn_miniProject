@@ -3,4 +3,4 @@ body {
   color: #3fb950;
   font-family: monospace;
 }
-h1 { font-size: 32px; }
+h1 { font-size: 32px; }.box { border: 1px solid #3fb950; padding: 10px; }
