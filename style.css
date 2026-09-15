@@ -1,10 +1,10 @@
 /* BOT:THEME:START */
 :root {
   --accent: #0aa5e2;
-  --bg: #fafafa;
-  --text: #1a1a1a;
-  --muted: #777;
-  --line: #e5e5e5;
+  --bg: #111111;      
+  --text: #eaeaea;    
+  --muted: #999;
+  --line: #2a2a2a;
 }
 /* BOT:THEME:END */
 
