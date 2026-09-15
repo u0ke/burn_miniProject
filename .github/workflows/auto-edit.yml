@@ -2,8 +2,8 @@ name: Auto Edit Code
 
 on:
   schedule:
-    - cron: '*/30 * * * *'   # every 30 minutes — PC can be OFF
-  workflow_dispatch:          # lets you run it manually too
+    - cron: '0 8,20 * * *'   # runs at 08:00 and 20:00 UTC every day
+  workflow_dispatch:
 
 permissions:
   contents: write
