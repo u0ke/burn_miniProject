@@ -1,11 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
-  <title>Auto Bot</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ice — front-end developer</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, I edit myself</h1>
-  <p>This repo edits its own code automatically.</p>
+
+<nav id="nav">
+  <a class="logo" href="#top">ice</a>
+  <div class="links">
+    <a href="#work">work</a>
+    <a href="#about">about</a>
+    <a href="#contact">contact</a>
+  </div>
+</nav>
+
+<!-- BOT:HERO:START -->
+<header class="hero" id="top">
+  <p class="hello">hey, i'm</p>
+  <h1>ice<span class="dot">.</span></h1>
+  <p class="sub">front-end developer &amp; designer — i build clean things for the web.</p>
+</header>
+<!-- BOT:HERO:END -->
+
+<section id="work">
+  <h2>selected work</h2>
+  <!-- BOT:PROJECTS:START -->
+  <div class="grid">
+    <a class="card" href="#">
+      <span class="num">01</span>
+      <h3>e-commerce store</h3>
+      <p>online shop with cart &amp; filters, pure html/css/js</p>
+    </a>
+    <a class="card" href="#">
+      <span class="num">02</span>
+      <h3>portfolio v2</h3>
+      <p>personal site with dark mode &amp; scroll animations</p>
+    </a>
+    <a class="card" href="#">
+      <span class="num">03</span>
+      <h3>game dashboard</h3>
+      <p>stats tracker ui inspired by long gaming nights</p>
+    </a>
+  </div>
+  <!-- BOT:PROJECTS:END -->
+</section>
+
+<section id="about">
+  <h2>about</h2>
+  <p class="about-text">
+    i'm a front-end developer who likes simple interfaces that work.
+    when i'm not coding, i'm in the ocean bodyboarding or grinding ranked.
+  </p>
+</section>
+
+<footer id="contact">
+  <p>want to work together? <a href="mailto:hello@example.com">hello@example.com</a></p>
+  <p class="small">© 2026 ice — github @u0ke</p>
+</footer>
+
+<script>
+// fade in on scroll
+const els = document.querySelectorAll("section, .hero");
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add("in");
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+els.forEach(el => io.observe(el));
+
+// nav shadow on scroll
+addEventListener("scroll", () => {
+  document.getElementById("nav").classList.toggle("scrolled", scrollY > 10);
+});
+</script>
+
 </body>
-</html><!-- edited by bot -->
+</html>
