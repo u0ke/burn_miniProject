@@ -1,6 +1,54 @@
-body {
-  background: #0d1117;
-  color: #3fb950;
-  font-family: monospace;
+
+/* nav */
+nav {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 28px 0; position: sticky; top: 0; background: var(--bg);
+  border-bottom: 1px solid transparent; transition: border-color .3s;
 }
-h1 { font-size: 32px; }.box { border: 1px solid #3fb950; padding: 10px; }
+nav.scrolled { border-color: var(--line); }
+.logo { font-size: 22px; font-weight: bold; color: var(--text); text-decoration: none; }
+.links a {
+  color: var(--muted); text-decoration: none; margin-left: 24px;
+  font-size: 15px; transition: color .25s;
+}
+.links a:hover { color: var(--accent); }
+
+/* hero */
+.hero { padding: 110px 0 80px; }
+.hello { color: var(--muted); font-size: 17px; }
+.hero h1 { font-size: 64px; font-weight: normal; letter-spacing: -1px; }
+.dot { color: var(--accent); }
+.sub { color: var(--muted); font-size: 18px; max-width: 420px; margin-top: 12px; }
+
+/* sections */
+section { padding: 70px 0; border-top: 1px solid var(--line); }
+h2 {
+  font-size: 15px; text-transform: uppercase; letter-spacing: 2px;
+  color: var(--muted); font-family: 'Segoe UI', sans-serif; font-weight: 600;
+  margin-bottom: 36px;
+}
+
+/* fade-in */
+section, .hero { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
+section.in, .hero.in { opacity: 1; transform: none; }
+
+/* work grid */
+.grid { display: flex; flex-direction: column; }
+.card {
+  display: block; padding: 24px 0; border-bottom: 1px solid var(--line);
+  text-decoration: none; color: inherit; transition: padding-left .3s ease;
+}
+.card:hover { padding-left: 12px; }
+.card .num { color: var(--muted); font-size: 13px; font-family: 'Segoe UI', sans-serif; }
+.card h3 { font-size: 24px; font-weight: normal; margin: 6px 0 2px; }
+.card:hover h3 { color: var(--accent); }
+.card p { color: var(--muted); font-size: 15px; }
+
+/* about */
+.about-text { font-size: 19px; max-width: 540px; }
+
+/* footer */
+footer { padding: 60px 0 40px; border-top: 1px solid var(--line); }
+footer a { color: var(--accent); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+.small { color: var(--muted); font-size: 14px; margin-top: 8px; }
